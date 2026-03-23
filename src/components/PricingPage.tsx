@@ -1,12 +1,6 @@
-import { Header } from './Header';
-import { Footer } from './Footer';
 import { Check, AlertCircle, Zap, TrendingUp, RefreshCw } from 'lucide-react';
 
-interface PricingPageProps {
-  onNavigate: (page: 'home' | 'pricing' | 'about') => void;
-}
-
-export function PricingPage({ onNavigate }: PricingPageProps) {
+export function PricingPage() {
   const payAsYouGoFees = [
     { range: 'Below ₦5,000', fee: '7.5%' },
     { range: '₦5,000 – ₦10,000', fee: '6.5%' },
@@ -36,8 +30,6 @@ export function PricingPage({ onNavigate }: PricingPageProps) {
 
   return (
     <div className="min-h-screen w-full">
-      <Header onNavigate={onNavigate} />
-      
       <main>
         {/* Hero Section */}
         <section className="w-full py-16" style={{ backgroundColor: 'var(--light-silver-gray)' }}>
@@ -288,8 +280,6 @@ export function PricingPage({ onNavigate }: PricingPageProps) {
           </div>
         </section>
       </main>
-
-      <Footer onNavigate={onNavigate} />
     </div>
   );
 }

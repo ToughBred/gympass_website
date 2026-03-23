@@ -1,13 +1,7 @@
 import { useState } from "react";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
 import { Target, Code, Zap, Shield, TrendingUp, Users, Mail, Phone, MapPin, Send } from "lucide-react";
 
-interface AboutUsPageProps {
-  onNavigate: (page: "home" | "pricing" | "about" | "privacy" | "terms") => void;
-}
-
-export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
+export function AboutUsPage() {
   const [contactForm, setContactForm] = useState({
     name: "",
     email: "",
@@ -39,8 +33,6 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
 
   return (
     <div className="min-h-screen w-full">
-      <Header onNavigate={onNavigate} />
-
       <main>
         {/* Hero Section */}
         <section className="w-full py-16" style={{ backgroundColor: "var(--light-silver-gray)" }}>
@@ -518,8 +510,6 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
           </div>
         </section>
       </main>
-
-      <Footer onNavigate={onNavigate} />
     </div>
   );
 }

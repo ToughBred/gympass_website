@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { FeaturesSection } from './components/FeaturesSection';
@@ -9,36 +8,69 @@ import { PricingPage } from './components/PricingPage';
 import { AboutUsPage } from './components/AboutUsPage';
 import { PrivacyPolicyPage } from './components/PrivacyPolicyPage';
 import { TermsOfServicePage } from './components/TermsOfServicePage';
+import { Routes, Route } from 'react-router-dom';
 
-export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'pricing' | 'about' | 'privacy' | 'terms'>('home');
-
-  if (currentPage === 'pricing') {
-    return <PricingPage onNavigate={setCurrentPage} />;
-  }
-
-  if (currentPage === 'about') {
-    return <AboutUsPage onNavigate={setCurrentPage} />;
-  }
-
-  if (currentPage === 'privacy') {
-    return <PrivacyPolicyPage onNavigate={setCurrentPage} />;
-  }
-
-  if (currentPage === 'terms') {
-    return <TermsOfServicePage onNavigate={setCurrentPage} />;
-  }
-
+function HomePage() {
   return (
     <div className="min-h-screen w-full">
-      <Header onNavigate={setCurrentPage} />
+      <Header />
       <main>
         <HeroSection />
         <FeaturesSection />
         <BookDemoSection />
         <AppScreenshotsSection />
       </main>
-      <Footer onNavigate={setCurrentPage} />
+      <Footer />
     </div>
+  );
+}
+
+function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="min-h-screen w-full">
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route
+        path="/pricing"
+        element={
+          <Layout>
+            <PricingPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/about"
+        element={
+          <Layout>
+            <AboutUsPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/privacy"
+        element={
+          <Layout>
+            <PrivacyPolicyPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/terms"
+        element={
+          <Layout>
+            <TermsOfServicePage />
+          </Layout>
+        }
+      />
+    </Routes>
   );
 }

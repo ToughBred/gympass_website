@@ -1,32 +1,37 @@
 import GympassLogo from "@/assets/logo_full.png";
+import { Link } from "react-router-dom";
 
-interface HeaderProps {
-  onNavigate?: (page: "home" | "pricing" | "about" | "privacy" | "terms") => void;
-}
-
-export function Header({ onNavigate }: HeaderProps) {
+export function Header() {
   return (
     <header className="w-full bg-white border-b border-[var(--light-silver-gray)]">
       <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between flex-nowrap">
         <div className="flex items-center gap-12 min-w-0">
-          <button
-            onClick={() => onNavigate?.("home")}
+          <Link
+            to="/"
             className="flex items-center hover:opacity-80 transition-opacity shrink-0"
           >
-            <img src={GympassLogo} alt="Gympass Logo" height="40" width="120" className="block" />
-          </button>
+            <img
+              src={GympassLogo}
+              alt="Gympass Logo"
+              height="40"
+              width="120"
+              className="block"
+            />
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8 whitespace-nowrap">
-            <button onClick={() => onNavigate?.("home")} className="hover:opacity-70 transition-opacity">
+            <Link to="/" className="hover:opacity-70 transition-opacity">
               Features
-            </button>
-            <button onClick={() => onNavigate?.("pricing")} className="hover:opacity-70 transition-opacity">
+            </Link>
+            <Link to="/pricing" className="hover:opacity-70 transition-opacity">
               Plans and Pricing
-            </button>
-            <button onClick={() => onNavigate?.("about")} className="hover:opacity-70 transition-opacity">
+            </Link>
+            <Link to="/about" className="hover:opacity-70 transition-opacity">
               About Us
-            </button>
-            <button className="hover:opacity-70 transition-opacity">Book Demo</button>
+            </Link>
+            <a href="#book-demo" className="hover:opacity-70 transition-opacity">
+              Book Demo
+            </a>
           </nav>
         </div>
 
