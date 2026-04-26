@@ -13,6 +13,30 @@ import "./DeleteAccountPage.css";
 type Step = "email" | "otp" | "success";
 type MessageType = "error" | "success" | "";
 
+type ApiResponse = {
+  message?: string;
+  data?: unknown;
+  error?: {
+    code?: string;
+    message?: string;
+  };
+  timestamp?: string;
+};
+
+async function readApiResponse(response: Response): Promise<ApiResponse> {
+  const contentType = response.headers.get("content-type") || "";
+
+  if (!contentType.includes("application/json")) {
+    return {};
+  }
+
+  return response.json();
+}
+
+function getApiMessage(payload: ApiResponse, fallback: string) {
+  return payload.error?.message || payload.message || fallback;
+}
+
 export function DeleteAccountPage() {
   const [step, setStep] = useState<Step>("email");
   const [email, setEmail] = useState("");
@@ -41,17 +65,27 @@ export function DeleteAccountPage() {
           body: JSON.stringify({ email }),
         },
       );
+      const payload = await readApiResponse(response);
 
       if (!response.ok) {
-        throw new Error("Failed to send OTP.");
+        throw new Error(getApiMessage(payload, "Failed to send OTP."));
       }
 
       setStep("otp");
-      setMessage("A verification code has been sent to your email.");
+      setMessage(
+        getApiMessage(
+          payload,
+          "A verification code has been sent to your email.",
+        ),
+      );
       setMessageType("success");
     } catch (err) {
       console.error(err);
-      setMessage("Failed to send OTP. Please confirm your email and try again.");
+      setMessage(
+        err instanceof Error
+          ? err.message
+          : "Unable to send OTP. Please try again.",
+      );
       setMessageType("error");
     } finally {
       setLoading(false);
@@ -76,21 +110,33 @@ export function DeleteAccountPage() {
           body: JSON.stringify({ email, otp }),
         },
       );
+      const payload = await readApiResponse(response);
 
       if (!response.ok) {
-        throw new Error("Invalid OTP or request failed.");
+        throw new Error(
+          getApiMessage(payload, "Invalid OTP or request failed."),
+        );
       }
 
       setStep("success");
-      setMessage("Your account deletion request has been verified.");
+      setMessage(
+        getApiMessage(
+          payload,
+          "Your account deletion request has been verified.",
+        ),
+      );
       setMessageType("success");
 
       setTimeout(() => {
         navigate("/");
-      }, 2000);
+      }, 7000);
     } catch (err) {
       console.error(err);
-      setMessage("Invalid OTP or request failed. Please check the code and try again.");
+      setMessage(
+        err instanceof Error
+          ? err.message
+          : "Unable to verify OTP. Please try again.",
+      );
       setMessageType("error");
     } finally {
       setLoading(false);
@@ -137,7 +183,9 @@ export function DeleteAccountPage() {
 
         <div className="delete-account-panel">
           <div className="delete-account-steps" aria-label="Deletion progress">
-            <div className={`delete-account-step ${step === "email" ? "active" : "done"}`}>
+            <div
+              className={`delete-account-step ${step === "email" ? "active" : "done"}`}
+            >
               <span>{step === "email" ? "1" : <CheckCircle2 size={16} />}</span>
               Email
             </div>
@@ -146,11 +194,17 @@ export function DeleteAccountPage() {
                 step === "otp" ? "active" : step === "success" ? "done" : ""
               }`}
             >
-              <span>{step === "success" ? <CheckCircle2 size={16} /> : "2"}</span>
+              <span>
+                {step === "success" ? <CheckCircle2 size={16} /> : "2"}
+              </span>
               Verify
             </div>
-            <div className={`delete-account-step ${step === "success" ? "active done" : ""}`}>
-              <span>{step === "success" ? <CheckCircle2 size={16} /> : "3"}</span>
+            <div
+              className={`delete-account-step ${step === "success" ? "active done" : ""}`}
+            >
+              <span>
+                {step === "success" ? <CheckCircle2 size={16} /> : "3"}
+              </span>
               Submitted
             </div>
           </div>
@@ -182,7 +236,9 @@ export function DeleteAccountPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                  <small>Use the email address linked to your Gympass account.</small>
+                  <small>
+                    Use the email address linked to your Gympass account.
+                  </small>
                 </div>
 
                 <button
@@ -250,8 +306,12 @@ export function DeleteAccountPage() {
             <div>
               <strong>Important</strong>
               <ul>
-                <li>You must have access to the email linked to your account.</li>
-                <li>Your account and associated data will be permanently deleted.</li>
+                <li>
+                  You must have access to the email linked to your account.
+                </li>
+                <li>
+                  Your account and associated data will be permanently deleted.
+                </li>
                 <li>This action cannot be undone.</li>
                 <li>Some records may be retained where required by law.</li>
               </ul>
