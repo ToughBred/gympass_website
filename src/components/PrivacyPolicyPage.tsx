@@ -1,5 +1,4 @@
 import { Shield } from "lucide-react";
-import ReactMarkdown from "react-markdown";
 import { privacyPolicyHtml } from "@/content/privacy_policy";
 
 export function PrivacyPolicyPage() {

@@ -1,50 +1,67 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Building2 } from 'lucide-react';
+import { useState } from "react";
+import { Mail, Phone, MapPin, Building2 } from "lucide-react";
 
 export function BookDemoSection() {
   const [formData, setFormData] = useState({
-    email: '',
-    phone: '',
-    gymAddress: '',
-    gymSize: ''
+    email: "",
+    phone: "",
+    gymAddress: "",
+    gymSize: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Handle form submission
-    alert('Thank you! We will contact you soon to schedule your demo.');
-    setFormData({ email: '', phone: '', gymAddress: '', gymSize: '' });
+    alert("Thank you! We will contact you soon to schedule your demo.");
+    setFormData({ email: "", phone: "", gymAddress: "", gymSize: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   return (
-    <section className="w-full py-20" style={{ backgroundColor: 'var(--primary-red-light)' }}>
+    <section
+      id="book-demo"
+      className="w-full py-20"
+      style={{ backgroundColor: "var(--primary-red-light)" }}
+    >
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-3" style={{ color: 'var(--primary-black)' }}>
+            <h2
+              className="text-3xl md:text-4xl font-semibold mb-3"
+              style={{ color: "var(--primary-black)" }}
+            >
               Book a Demo
             </h2>
-            <p style={{ color: 'var(--dark-gray)' }}>
-              See how Gympass can transform your gym management. Schedule a personalized demo today.
+            <p style={{ color: "var(--dark-gray)" }}>
+              See how Gympass can transform your gym management. Schedule a
+              personalized demo today.
             </p>
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="email" className="block mb-2" style={{ color: 'var(--primary-black)' }}>
+                <label
+                  htmlFor="email"
+                  className="block mb-2"
+                  style={{ color: "var(--primary-black)" }}
+                >
                   Email Address
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5" style={{ color: 'var(--dark-gray)' }} />
+                  <Mail
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
+                    style={{ color: "var(--dark-gray)" }}
+                  />
                   <input
                     type="email"
                     id="email"
@@ -54,20 +71,27 @@ export function BookDemoSection() {
                     required
                     placeholder="your@email.com"
                     className="w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2"
-                    style={{ 
-                      borderColor: 'var(--light-silver-gray)',
-                      color: 'var(--primary-black)'
+                    style={{
+                      borderColor: "var(--light-silver-gray)",
+                      color: "var(--primary-black)",
                     }}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="phone" className="block mb-2" style={{ color: 'var(--primary-black)' }}>
+                <label
+                  htmlFor="phone"
+                  className="block mb-2"
+                  style={{ color: "var(--primary-black)" }}
+                >
                   Phone Number
                 </label>
                 <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5" style={{ color: 'var(--dark-gray)' }} />
+                  <Phone
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
+                    style={{ color: "var(--dark-gray)" }}
+                  />
                   <input
                     type="tel"
                     id="phone"
@@ -77,20 +101,27 @@ export function BookDemoSection() {
                     required
                     placeholder="+1 (555) 000-0000"
                     className="w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2"
-                    style={{ 
-                      borderColor: 'var(--light-silver-gray)',
-                      color: 'var(--primary-black)'
+                    style={{
+                      borderColor: "var(--light-silver-gray)",
+                      color: "var(--primary-black)",
                     }}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="gymAddress" className="block mb-2" style={{ color: 'var(--primary-black)' }}>
+                <label
+                  htmlFor="gymAddress"
+                  className="block mb-2"
+                  style={{ color: "var(--primary-black)" }}
+                >
                   Gym Address
                 </label>
                 <div className="relative">
-                  <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5" style={{ color: 'var(--dark-gray)' }} />
+                  <MapPin
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
+                    style={{ color: "var(--dark-gray)" }}
+                  />
                   <input
                     type="text"
                     id="gymAddress"
@@ -100,20 +131,27 @@ export function BookDemoSection() {
                     required
                     placeholder="123 Main Street, City, State"
                     className="w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2"
-                    style={{ 
-                      borderColor: 'var(--light-silver-gray)',
-                      color: 'var(--primary-black)'
+                    style={{
+                      borderColor: "var(--light-silver-gray)",
+                      color: "var(--primary-black)",
                     }}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="gymSize" className="block mb-2" style={{ color: 'var(--primary-black)' }}>
+                <label
+                  htmlFor="gymSize"
+                  className="block mb-2"
+                  style={{ color: "var(--primary-black)" }}
+                >
                   Gym Size
                 </label>
                 <div className="relative">
-                  <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5" style={{ color: 'var(--dark-gray)' }} />
+                  <Building2
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
+                    style={{ color: "var(--dark-gray)" }}
+                  />
                   <select
                     id="gymSize"
                     name="gymSize"
@@ -121,9 +159,9 @@ export function BookDemoSection() {
                     onChange={handleChange}
                     required
                     className="w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 appearance-none bg-white"
-                    style={{ 
-                      borderColor: 'var(--light-silver-gray)',
-                      color: 'var(--primary-black)'
+                    style={{
+                      borderColor: "var(--light-silver-gray)",
+                      color: "var(--primary-black)",
                     }}
                   >
                     <option value="">Select gym size</option>
@@ -139,7 +177,7 @@ export function BookDemoSection() {
               <button
                 type="submit"
                 className="w-full py-3 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: 'var(--primary-red)' }}
+                style={{ backgroundColor: "var(--primary-red)" }}
               >
                 Schedule Demo
               </button>

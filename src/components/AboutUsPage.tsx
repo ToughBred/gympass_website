@@ -186,74 +186,6 @@ export function AboutUsPage() {
               </div>
             </div>
 
-            {/* Leadership Section */}
-            <div>
-              <h2 className="text-3xl font-semibold mb-8" style={{ color: "var(--primary-black)" }}>
-                Leadership
-              </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* Technical Co-Founder */}
-                <div
-                  className="bg-white rounded-2xl p-8 border shadow-sm"
-                  style={{ borderColor: "var(--light-silver-gray)" }}
-                >
-                  <div className="mb-4">
-                    <div
-                      className="w-20 h-20 rounded-full mb-4 flex items-center justify-center"
-                      style={{ backgroundColor: "var(--primary-red-light)" }}
-                    >
-                      <Code className="w-10 h-10" style={{ color: "var(--primary-red)" }} />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-1" style={{ color: "var(--primary-black)" }}>
-                      Tobi Odeyemi
-                    </h3>
-                    <p className="text-sm mb-4" style={{ color: "var(--primary-red)" }}>
-                      Technical Co-Founder & Chief Technology Officer (CTO)
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--dark-gray)" }}>
-                    Tobi leads the technical vision and architecture behind GymPass. He is responsible for system
-                    design, platform reliability, security, and long-term scalability.
-                  </p>
-                  <p className="text-sm leading-relaxed mt-3" style={{ color: "var(--dark-gray)" }}>
-                    With a strong background in backend systems, distributed systems, and product engineering, he
-                    ensures GymPass is built on solid foundations that can support gyms today — and at much larger scale
-                    tomorrow.
-                  </p>
-                </div>
-
-                {/* Business Development Co-Founder */}
-                <div
-                  className="bg-white rounded-2xl p-8 border shadow-sm"
-                  style={{ borderColor: "var(--light-silver-gray)" }}
-                >
-                  <div className="mb-4">
-                    <div
-                      className="w-20 h-20 rounded-full mb-4 flex items-center justify-center"
-                      style={{ backgroundColor: "var(--primary-red-light)" }}
-                    >
-                      <Users className="w-10 h-10" style={{ color: "var(--primary-red)" }} />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-1" style={{ color: "var(--primary-black)" }}>
-                      Damilare Odeyemi
-                    </h3>
-                    <p className="text-sm mb-4" style={{ color: "var(--primary-red)" }}>
-                      Co-Founder & Head of Business Development
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--dark-gray)" }}>
-                    Damilare leads business strategy, partnerships, customer growth, and market expansion. He focuses on
-                    aligning GymPass with the real needs of gym owners, fitness entrepreneurs, and multi-branch
-                    operators.
-                  </p>
-                  <p className="text-sm leading-relaxed mt-3" style={{ color: "var(--dark-gray)" }}>
-                    His role ensures GymPass is not just technically strong, but commercially viable, sustainable, and
-                    continuously improving based on customer feedback.
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* More Than One Product */}
             <div
               className="bg-white rounded-2xl p-8 border shadow-sm"
@@ -328,7 +260,7 @@ export function AboutUsPage() {
           </div>
         </section>
 
-        {/* Contact Us Form Section */}
+        
         <section className="w-full py-20" style={{ backgroundColor: "var(--primary-red-light)" }}>
           <div className="max-w-[1000px] mx-auto px-6">
             <div className="text-center mb-10">
