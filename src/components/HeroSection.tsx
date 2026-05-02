@@ -1,4 +1,4 @@
-import heroImage from "@/assets/b37cc44a865e57a8cc47032dc0ae151bc45ef002.png";
+import heroImage from "@/assets/b37cc44a865e57a8cc47032dc0ae151bc45ef002.jpg";
 
 export function HeroSection() {
   return (
