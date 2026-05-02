@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  AlertTriangle,
-  ArrowLeft,
-  CheckCircle2,
-  LockKeyhole,
-  Mail,
-  ShieldCheck,
-} from "lucide-react";
+import { AlertTriangle, ArrowLeft, CheckCircle2, LockKeyhole, Mail, ShieldCheck } from "lucide-react";
 import "./DeleteAccountPage.css";
 
 type Step = "email" | "otp" | "success";
@@ -55,16 +48,13 @@ export function DeleteAccountPage() {
     setMessageType("");
 
     try {
-      const response = await fetch(
-        "https://prod.api.gympass.fitness/api/v1/user/account/deletion/otp",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email }),
+      const response = await fetch("https://prod.api.gymportal.app/api/v1/user/account/deletion/otp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify({ email }),
+      });
       const payload = await readApiResponse(response);
 
       if (!response.ok) {
@@ -72,20 +62,11 @@ export function DeleteAccountPage() {
       }
 
       setStep("otp");
-      setMessage(
-        getApiMessage(
-          payload,
-          "A verification code has been sent to your email.",
-        ),
-      );
+      setMessage(getApiMessage(payload, "A verification code has been sent to your email."));
       setMessageType("success");
     } catch (err) {
       console.error(err);
-      setMessage(
-        err instanceof Error
-          ? err.message
-          : "Unable to send OTP. Please try again.",
-      );
+      setMessage(err instanceof Error ? err.message : "Unable to send OTP. Please try again.");
       setMessageType("error");
     } finally {
       setLoading(false);
@@ -100,31 +81,21 @@ export function DeleteAccountPage() {
     setMessageType("");
 
     try {
-      const response = await fetch(
-        "https://prod.api.gympass.fitness/api/v1/user/account/deletion/confirmation",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, otp }),
+      const response = await fetch("https://prod.api.gymportal.app/api/v1/user/account/deletion/confirmation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify({ email, otp }),
+      });
       const payload = await readApiResponse(response);
 
       if (!response.ok) {
-        throw new Error(
-          getApiMessage(payload, "Invalid OTP or request failed."),
-        );
+        throw new Error(getApiMessage(payload, "Invalid OTP or request failed."));
       }
 
       setStep("success");
-      setMessage(
-        getApiMessage(
-          payload,
-          "Your account deletion request has been verified.",
-        ),
-      );
+      setMessage(getApiMessage(payload, "Your account deletion request has been verified."));
       setMessageType("success");
 
       setTimeout(() => {
@@ -132,11 +103,7 @@ export function DeleteAccountPage() {
       }, 7000);
     } catch (err) {
       console.error(err);
-      setMessage(
-        err instanceof Error
-          ? err.message
-          : "Unable to verify OTP. Please try again.",
-      );
+      setMessage(err instanceof Error ? err.message : "Unable to verify OTP. Please try again.");
       setMessageType("error");
     } finally {
       setLoading(false);
@@ -160,10 +127,7 @@ export function DeleteAccountPage() {
           </div>
 
           <h1>Request Account Deletion</h1>
-          <p>
-            Verify the email connected to your Gympass account before submitting
-            a permanent deletion request.
-          </p>
+          <p>Verify the email connected to your Gympass account before submitting a permanent deletion request.</p>
 
           <div className="delete-account-info-grid" aria-label="Deletion steps">
             <div className="delete-account-info-card">
@@ -183,28 +147,16 @@ export function DeleteAccountPage() {
 
         <div className="delete-account-panel">
           <div className="delete-account-steps" aria-label="Deletion progress">
-            <div
-              className={`delete-account-step ${step === "email" ? "active" : "done"}`}
-            >
+            <div className={`delete-account-step ${step === "email" ? "active" : "done"}`}>
               <span>{step === "email" ? "1" : <CheckCircle2 size={16} />}</span>
               Email
             </div>
-            <div
-              className={`delete-account-step ${
-                step === "otp" ? "active" : step === "success" ? "done" : ""
-              }`}
-            >
-              <span>
-                {step === "success" ? <CheckCircle2 size={16} /> : "2"}
-              </span>
+            <div className={`delete-account-step ${step === "otp" ? "active" : step === "success" ? "done" : ""}`}>
+              <span>{step === "success" ? <CheckCircle2 size={16} /> : "2"}</span>
               Verify
             </div>
-            <div
-              className={`delete-account-step ${step === "success" ? "active done" : ""}`}
-            >
-              <span>
-                {step === "success" ? <CheckCircle2 size={16} /> : "3"}
-              </span>
+            <div className={`delete-account-step ${step === "success" ? "active done" : ""}`}>
+              <span>{step === "success" ? <CheckCircle2 size={16} /> : "3"}</span>
               Submitted
             </div>
           </div>
@@ -236,16 +188,10 @@ export function DeleteAccountPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                  <small>
-                    Use the email address linked to your Gympass account.
-                  </small>
+                  <small>Use the email address linked to your Gympass account.</small>
                 </div>
 
-                <button
-                  type="submit"
-                  className="delete-account-primary-button"
-                  disabled={loading}
-                >
+                <button type="submit" className="delete-account-primary-button" disabled={loading}>
                   {loading ? "Sending OTP..." : "Send Verification Code"}
                 </button>
               </form>
@@ -268,19 +214,11 @@ export function DeleteAccountPage() {
                   <small>We sent the verification code to {email}.</small>
                 </div>
 
-                <button
-                  type="submit"
-                  className="delete-account-dark-button"
-                  disabled={loading}
-                >
+                <button type="submit" className="delete-account-dark-button" disabled={loading}>
                   {loading ? "Verifying..." : "Confirm & Delete Account"}
                 </button>
 
-                <button
-                  type="button"
-                  onClick={resetEmailStep}
-                  className="delete-account-back-button"
-                >
+                <button type="button" onClick={resetEmailStep} className="delete-account-back-button">
                   <ArrowLeft size={16} aria-hidden="true" />
                   Change email
                 </button>
@@ -293,10 +231,7 @@ export function DeleteAccountPage() {
                   <CheckCircle2 size={36} aria-hidden="true" />
                 </div>
                 <h2>Account Deletion Requested</h2>
-                <p>
-                  Your request has been verified and submitted. You will be
-                  redirected shortly.
-                </p>
+                <p>Your request has been verified and submitted. You will be redirected shortly.</p>
               </div>
             )}
           </div>
@@ -306,12 +241,8 @@ export function DeleteAccountPage() {
             <div>
               <strong>Important</strong>
               <ul>
-                <li>
-                  You must have access to the email linked to your account.
-                </li>
-                <li>
-                  Your account and associated data will be permanently deleted.
-                </li>
+                <li>You must have access to the email linked to your account.</li>
+                <li>Your account and associated data will be permanently deleted.</li>
                 <li>This action cannot be undone.</li>
                 <li>Some records may be retained where required by law.</li>
               </ul>

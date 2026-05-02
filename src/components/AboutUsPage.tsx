@@ -52,17 +52,17 @@ export function AboutUsPage() {
             {/* Introduction */}
             <div>
               <p className="text-lg leading-relaxed mb-4" style={{ color: "var(--dark-gray)" }}>
-                <strong style={{ color: "var(--primary-black)" }}>GymPass</strong> is a modern gym management platform
+                <strong style={{ color: "var(--primary-black)" }}>GymPortal</strong> is a modern gym management platform
                 designed to help fitness businesses operate efficiently, collect payments seamlessly, and grow with
                 confidence.
               </p>
               <p className="text-lg leading-relaxed mb-4" style={{ color: "var(--dark-gray)" }}>
                 We understand the realities of running gyms in Nigeria and similar markets — inconsistent tools,
-                fragmented systems, and software that doesn't scale with growth. GymPass exists to solve those problems
-                with technology that is simple, reliable, and built for real-world operations.
+                fragmented systems, and software that doesn't scale with growth. GymPortal exists to solve those
+                problems with technology that is simple, reliable, and built for real-world operations.
               </p>
               <p className="text-lg leading-relaxed" style={{ color: "var(--dark-gray)" }}>
-                GymPass is proudly a product of{" "}
+                GymPortal is proudly a product of{" "}
                 <a href="https://toughbred.com">
                   <strong style={{ color: "var(--color-blue-600)" }}>ToughBred Technologies</strong>
                 </a>
@@ -126,21 +126,21 @@ export function AboutUsPage() {
                 We don't just ship software — we build systems meant to last, scale, and adapt as businesses grow.
               </p>
               <p className="text-base mt-4" style={{ color: "var(--dark-gray)" }}>
-                GymPass is one of our flagship SaaS products, created with the same engineering discipline and product
+                GymPortal is one of our flagship SaaS products, created with the same engineering discipline and product
                 thinking we apply across all our solutions.
               </p>
             </div>
 
-            {/* Why We Built GymPass */}
+            {/* Why We Built GymPortal */}
             <div>
               <h2 className="text-3xl font-semibold mb-6" style={{ color: "var(--primary-black)" }}>
-                Why We Built GymPass
+                Why We Built GymPortal
               </h2>
               <p className="text-lg mb-6" style={{ color: "var(--dark-gray)" }}>
                 Most gym management tools were built for markets that operate very differently from ours.
               </p>
               <p className="text-lg mb-4" style={{ color: "var(--dark-gray)" }}>
-                GymPass was built from the ground up to support:
+                GymPortal was built from the ground up to support:
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
@@ -195,7 +195,7 @@ export function AboutUsPage() {
                 More Than One Product
               </h2>
               <p className="text-lg mb-4" style={{ color: "var(--dark-gray)" }}>
-                GymPass is part of a growing ecosystem of SaaS products built by ToughBred Technologies.
+                GymPortal is part of a growing ecosystem of SaaS products built by ToughBred Technologies.
               </p>
               <p className="text-lg mb-4" style={{ color: "var(--dark-gray)" }}>
                 We actively build tools that help businesses:
@@ -260,7 +260,6 @@ export function AboutUsPage() {
           </div>
         </section>
 
-        
         <section className="w-full py-20" style={{ backgroundColor: "var(--primary-red-light)" }}>
           <div className="max-w-[1000px] mx-auto px-6">
             <div className="text-center mb-10">
@@ -284,7 +283,7 @@ export function AboutUsPage() {
                   Email Us
                 </h3>
                 <p className="text-sm" style={{ color: "var(--dark-gray)" }}>
-                  support@gympass.ng
+                  support@gymportal.app
                 </p>
               </div>
 

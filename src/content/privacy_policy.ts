@@ -2,17 +2,17 @@ export const privacyPolicyHtml = `
   <p><strong>Last Updated:</strong> March 2026</p>
 
   <p>
-    Welcome to <strong>GymPass</strong> ("GymPass", "we", "our", or "us"). This Privacy Policy
+    Welcome to <strong>GymPortal</strong> ("GymPortal", "we", "our", or "us"). This Privacy Policy
     explains how we collect, use, disclose, store, transfer, and protect personal information
-    when you use our platform, including https://gympass.fitness, our mobile applications,
+    when you use our platform, including https://gymportal.app, our mobile applications,
     dashboards, APIs, QR-based check-in flows, payment flows, and related services
     (collectively, the "Platform").
   </p>
 
   <p>
-    GymPass is a technology platform that helps gyms manage memberships, attendance,
+    GymPortal is a technology platform that helps gyms manage memberships, attendance,
     check-ins, and payments, and helps members access gym services offered by independent gyms.
-    In some cases, GymPass acts as a data controller for information we determine the purpose
+    In some cases, GymPortal acts as a data controller for information we determine the purpose
     and means of processing. In other cases, we may process personal data on behalf of gyms
     that use our Platform.
   </p>
@@ -95,7 +95,7 @@ export const privacyPolicyHtml = `
 
   <blockquote>
     <p>
-      <strong>Important:</strong> GymPass does <strong>not</strong> store your full payment card
+      <strong>Important:</strong> GymPortal does <strong>not</strong> store your full payment card
       details unless expressly stated otherwise. Payments are processed by third-party payment
       providers and financial infrastructure partners that maintain their own compliance and
       security controls.
@@ -210,7 +210,7 @@ export const privacyPolicyHtml = `
   <h3>5.6 Protection of Rights, Safety, and Integrity</h3>
   <p>
     We may disclose information where reasonably necessary to protect the rights, safety,
-    property, security, or integrity of GymPass, gyms, users, payment systems, or the public.
+    property, security, or integrity of GymPortal, gyms, users, payment systems, or the public.
   </p>
 
   <hr />
@@ -301,7 +301,7 @@ export const privacyPolicyHtml = `
   <h2>10. Fraud Prevention, Abuse Detection, and System Integrity</h2>
 
   <p>
-    Because GymPass supports payments, memberships, access control, and transaction-sensitive
+    Because GymPortal supports payments, memberships, access control, and transaction-sensitive
     workflows, we may process personal information to detect and investigate abuse, including:
   </p>
 
@@ -345,7 +345,7 @@ export const privacyPolicyHtml = `
   </p>
 
   <p>
-    To exercise your rights, contact us at <strong>privacy@gympass.fitness</strong>.
+    To exercise your rights, contact us at <strong>privacy@gymportal.app</strong>.
   </p>
 
   <hr />
@@ -364,7 +364,7 @@ export const privacyPolicyHtml = `
   <h2>13. Children and Minors</h2>
 
   <p>
-    GymPass is not directed to children under the age of 13 unless use is expressly permitted and
+    GymPortal is not directed to children under the age of 13 unless use is expressly permitted and
     managed through an authorized parent, guardian, or gym arrangement consistent with applicable law.
   </p>
 
@@ -425,12 +425,12 @@ export const privacyPolicyHtml = `
 
   <p>
     <strong>Email:</strong> support@toughbred.com<br />
-    <strong>Website:</strong> https://gympass.fitness
+    <strong>Website:</strong> https://gymportal.app
   </p>
 
   <hr />
 
   <p>
-    By using GymPass, you acknowledge that you have read and understood this Privacy Policy.
+    By using GymPortal, you acknowledge that you have read and understood this Privacy Policy.
   </p>
 `;

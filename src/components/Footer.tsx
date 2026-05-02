@@ -14,18 +14,13 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Dumbbell
-                className="w-6 h-6"
-                style={{ color: "var(--primary-red)" }}
-              />
+              <Dumbbell className="w-6 h-6" style={{ color: "var(--primary-red)" }} />
               <span className="font-semibold text-lg text-white">GYMPASS</span>
             </div>
-            <p className="text-sm text-gray-300 mb-4">
-              The smarter way to manage your gym business.
-            </p>
+            <p className="text-sm text-gray-300 mb-4">The smarter way to manage your gym business.</p>
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com/gympass_fitness"
+                href="https://www.instagram.com/gymportal"
                 className="w-9 h-9 rounded-full flex items-center justify-center hover:opacity-70 transition-opacity"
                 style={{ backgroundColor: "var(--primary-red)" }}
               >
@@ -39,7 +34,7 @@ export function Footer() {
                 <Twitter className="w-4 h-4 text-white" />
               </a>
               <a
-                href="https://www.instagram.com/gympass_fitness"
+                href="https://www.instagram.com/gymportal"
                 className="w-9 h-9 rounded-full flex items-center justify-center hover:opacity-70 transition-opacity"
                 style={{ backgroundColor: "var(--primary-red)" }}
               >
@@ -64,10 +59,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/pricing"
-                  className="hover:text-white transition-colors"
-                >
+                <Link to="/pricing" className="hover:text-white transition-colors">
                   Pricing
                 </Link>
               </li>
@@ -78,18 +70,12 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-white">Company</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link
-                  to="/about-us"
-                  className="hover:text-white transition-colors"
-                >
+                <Link to="/about-us" className="hover:text-white transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <a
-                  href="/contact-us"
-                  className="hover:text-white transition-colors"
-                >
+                <a href="/contact-us" className="hover:text-white transition-colors">
                   Contact Us
                 </a>
               </li>
@@ -100,18 +86,12 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-white">Legal</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link
-                  to="/privacy"
-                  className="hover:text-white transition-colors"
-                >
+                <Link to="/privacy" className="hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/terms"
-                  className="hover:text-white transition-colors"
-                >
+                <Link to="/terms" className="hover:text-white transition-colors">
                   Terms of Service
                 </Link>
               </li>
@@ -119,10 +99,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div
-          className="pt-8 border-t text-center text-sm text-gray-400"
-          style={{ borderColor: "var(--dark-gray)" }}
-        >
+        <div className="pt-8 border-t text-center text-sm text-gray-400" style={{ borderColor: "var(--dark-gray)" }}>
           <p>&copy; 2026 Gympass. All rights reserved.</p>
         </div>
       </div>

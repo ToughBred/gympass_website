@@ -2,20 +2,20 @@ export const termsOfServiceHtml = `
   <h1>Terms of Service</h1>
 
   <p>
-    Welcome to <strong>GymPass</strong> ("GymPass", "we", "our", or "us"). These Terms of Service
-    ("Terms") govern your access to and use of our platform, including https://gympass.fitness,
+    Welcome to <strong>GymPortal</strong> ("GymPortal", "we", "our", or "us"). These Terms of Service
+    ("Terms") govern your access to and use of our platform, including https://gymportal.app,
     mobile applications, and related services (collectively, the "Platform").
   </p>
 
   <p>
-    By using GymPass, you agree to these Terms. If you do not agree, you must not use the Platform.
+    By using GymPortal, you agree to these Terms. If you do not agree, you must not use the Platform.
   </p>
 
   <hr />
 
   <h2>1. Nature of the Platform</h2>
 
-  <p>GymPass is a <strong>technology platform</strong> that enables:</p>
+  <p>GymPortal is a <strong>technology platform</strong> that enables:</p>
 
   <ul>
     <li>Gym members to purchase, manage, and access gym memberships</li>
@@ -24,7 +24,7 @@ export const termsOfServiceHtml = `
     <li>Payment processing on behalf of gyms</li>
   </ul>
 
-  <p><strong>GymPass is not a gym, fitness provider, or health service provider.</strong></p>
+  <p><strong>GymPortal is not a gym, fitness provider, or health service provider.</strong></p>
 
   <p>All fitness services are provided independently by third-party gyms.</p>
 
@@ -32,7 +32,7 @@ export const termsOfServiceHtml = `
 
   <h2>2. Roles and Responsibilities</h2>
 
-  <h3>2.1 GymPass</h3>
+  <h3>2.1 GymPortal</h3>
   <ul>
     <li>Provides infrastructure for membership management, access control, and payments</li>
     <li>Acts as a <strong>payment collection and settlement facilitator</strong> for gyms</li>
@@ -76,7 +76,7 @@ export const termsOfServiceHtml = `
   </ul>
 
   <p>
-    GymPass is not liable for unauthorized access caused by your failure to secure your account.
+    GymPortal is not liable for unauthorized access caused by your failure to secure your account.
   </p>
 
   <hr />
@@ -86,13 +86,13 @@ export const termsOfServiceHtml = `
   <ul>
     <li>Access to gyms is verified through <strong>QR-based check-ins</strong></li>
     <li>A successful check-in represents a valid usage event</li>
-    <li>GymPass records check-in data as <strong>authoritative system logs</strong></li>
+    <li>GymPortal records check-in data as <strong>authoritative system logs</strong></li>
   </ul>
 
   <h3>Important:</h3>
   <ul>
     <li>Attempting to bypass or manipulate check-ins may result in suspension</li>
-    <li>GymPass is not responsible for denial of access due to gym-specific policies</li>
+    <li>GymPortal is not responsible for denial of access due to gym-specific policies</li>
   </ul>
 
   <hr />
@@ -103,7 +103,7 @@ export const termsOfServiceHtml = `
   <ul>
     <li>Payments are processed via third-party payment providers</li>
     <li>
-      By making a payment, you authorize GymPass to:
+      By making a payment, you authorize GymPortal to:
       <ul>
         <li>Collect funds on behalf of the gym</li>
         <li>Deduct applicable fees</li>
@@ -114,7 +114,7 @@ export const termsOfServiceHtml = `
 
   <h3>6.2 Wallet / Stored Value (If Applicable)</h3>
   <ul>
-    <li>GymPass may provide a <strong>wallet or balance system</strong></li>
+    <li>GymPortal may provide a <strong>wallet or balance system</strong></li>
     <li>
       Wallet balances:
       <ul>
@@ -145,7 +145,7 @@ export const termsOfServiceHtml = `
   </ul>
 
   <h3>6.5 Failed and Reversed Transactions</h3>
-  <p>GymPass is not responsible for:</p>
+  <p>GymPortal is not responsible for:</p>
   <ul>
     <li>Bank failures</li>
     <li>Payment gateway downtime</li>
@@ -162,7 +162,7 @@ export const termsOfServiceHtml = `
   </ul>
 
   <h3>7.2 Platform-Level Intervention</h3>
-  <p>GymPass may intervene in disputes but:</p>
+  <p>GymPortal may intervene in disputes but:</p>
   <ul>
     <li>Does <strong>not guarantee refunds</strong></li>
     <li>
@@ -205,7 +205,7 @@ export const termsOfServiceHtml = `
 
   <h2>9. Data Protection and NDPR Compliance</h2>
 
-  <p>GymPass processes personal data in accordance with:</p>
+  <p>GymPortal processes personal data in accordance with:</p>
   <ul>
     <li><strong>Nigeria Data Protection Regulation (NDPR)</strong></li>
     <li>Applicable international data protection laws</li>
@@ -253,7 +253,7 @@ export const termsOfServiceHtml = `
 
   <h2>12. Platform Availability</h2>
 
-  <p>GymPass is provided <strong>"as is"</strong> and <strong>"as available"</strong>.</p>
+  <p>GymPortal is provided <strong>"as is"</strong> and <strong>"as available"</strong>.</p>
 
   <p>We do not guarantee:</p>
   <ul>
@@ -272,11 +272,11 @@ export const termsOfServiceHtml = `
   <h2>13. Health and Liability Disclaimer</h2>
 
   <ul>
-    <li>GymPass does <strong>not</strong> provide medical, fitness, or training advice</li>
+    <li>GymPortal does <strong>not</strong> provide medical, fitness, or training advice</li>
     <li>You use gym facilities <strong>at your own risk</strong></li>
   </ul>
 
-  <p>GymPass is not liable for:</p>
+  <p>GymPortal is not liable for:</p>
   <ul>
     <li>Injuries</li>
     <li>Health issues</li>
@@ -293,7 +293,7 @@ export const termsOfServiceHtml = `
 
   <ul>
     <li>
-      GymPass is not liable for:
+      GymPortal is not liable for:
       <ul>
         <li>Indirect or consequential damages</li>
         <li>Loss of data, profits, or opportunities</li>
@@ -311,7 +311,7 @@ export const termsOfServiceHtml = `
 
   <h2>15. Indemnification</h2>
 
-  <p>You agree to indemnify GymPass against claims arising from:</p>
+  <p>You agree to indemnify GymPortal against claims arising from:</p>
   <ul>
     <li>Your misuse of the Platform</li>
     <li>Your violation of these Terms</li>
@@ -346,7 +346,7 @@ export const termsOfServiceHtml = `
 
   <h2>18. International Users</h2>
 
-  <p>If you access GymPass from outside Nigeria:</p>
+  <p>If you access GymPortal from outside Nigeria:</p>
   <ul>
     <li>You agree to comply with local laws</li>
     <li>You consent to cross-border data processing</li>
@@ -370,12 +370,12 @@ export const termsOfServiceHtml = `
 
   <p>
     <strong>Email:</strong> support@toughbred.com<br />
-    <strong>Website:</strong> https://gympass.fitness
+    <strong>Website:</strong> https://gymportal.app
   </p>
 
   <hr />
 
   <p>
-    By using GymPass, you acknowledge that you have read, understood, and agreed to these Terms.
+    By using GymPortal, you acknowledge that you have read, understood, and agreed to these Terms.
   </p>
 `;
