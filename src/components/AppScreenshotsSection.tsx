@@ -2,6 +2,8 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import MemberAppUI from "@/assets/member.jpg";
 import GymAdminMobile from "@/assets/gym_admin_mobile.jpg";
 import GymAdminDesktop from "@/assets/gym_admin_desktop.png";
+import GooglePlayBadge from "@/assets/store/google-play-badge.png";
+import AppStoreBadge from "@/assets/store/app-store-badge.png";
 
 export function AppScreenshotsSection() {
   return (
@@ -38,6 +40,18 @@ export function AppScreenshotsSection() {
                 <div className="rounded-xl overflow-hidden border" style={{ borderColor: "var(--light-silver-gray)" }}>
                   <ImageWithFallback src={MemberAppUI} alt="Member mobile app dashboard" className="w-full h-auto" />
                 </div>
+                <div className="flex gap-4 mt-4">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=app.gymportal.member"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={GooglePlayBadge} alt="Get it on Google Play" style={{ height: 40 }} />
+                  </a>
+                  <a href="https://apps.apple.com/app/id" target="_blank" rel="noopener noreferrer">
+                    <img src={AppStoreBadge} alt="Download on the App Store" style={{ height: 40 }} />
+                  </a>
+                </div>
               </div>
 
               <div
@@ -54,6 +68,18 @@ export function AppScreenshotsSection() {
                 </div>
                 <div className="rounded-xl overflow-hidden border" style={{ borderColor: "var(--light-silver-gray)" }}>
                   <ImageWithFallback src={GymAdminMobile} alt="Admin mobile app dashboard" className="w-full h-auto" />
+                </div>
+                <div className="flex gap-4 mt-4">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=app.gymportal.admin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={GooglePlayBadge} alt="Get it on Google Play" style={{ height: 40 }} />
+                  </a>
+                  <a href="https://apps.apple.com/app/id" target="_blank" rel="noopener noreferrer">
+                    <img src={AppStoreBadge} alt="Download on the App Store" style={{ height: 40 }} />
+                  </a>
                 </div>
               </div>
             </div>
